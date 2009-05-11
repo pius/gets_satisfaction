@@ -1,0 +1,1 @@
+require 'gets_satisfaction'

@@ -1,0 +1,24 @@
+For Rails 2.2 and above:
+
+0. Make sure you've installed one of the GetSatisfaction widgets or tabs into your site.  This gem will allow uses to interact with your GetSatisfaction conversation using the account they've already created on your site.
+
+1. Add the following to your environment.rb file:
+
+  config.gem "pius-gets_satisfaction", :lib => 'gets_satisfaction', :source => 'http://gems.github.com', :version => '0.1.0'
+  
+2. Run rake gems:install in the root of your Rails application and restart your application if necessary
+
+3. In your html templates, when a user is logged in, include a call to FastPass.script such as the following (which, for example, a model object named current_user):
+   <%= FastPass.script(CONSUMER_KEY, CONSUMER_SECRET, current_user.email, current_user.name, current_user.id) %>
+
+For other Ruby/Rails applications: 
+
+0. Make sure you've installed one of the GetSatisfaction widgets or tabs into your site.  This gem will allow uses to interact with your GetSatisfaction conversation using the account they've already created on your site.
+
+1. Install the gem: 'sudo gem install gets_satisfaction'
+
+2. Add "require 'gets_satisfaction'" into environment.rb or an initializer file of your choice and restart your server
+
+3. In your html templates, when a user is logged in, include a call to FastPass.script such as the following (which, for example, a model object named current_user):
+
+  <%= FastPass.script(CONSUMER_KEY, CONSUMER_SECRET, current_user.email, current_user.name, current_user.id) %>
