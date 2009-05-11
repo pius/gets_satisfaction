@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2009-05-11}
   s.description = %q{Integrates your Ruby app with Get Satisfaction FastPass.}
   s.email = %q{scott@getsatisfaction}
-  s.extra_rdoc_files = ["lib/fastpass.rb", "lib/gets_satisfaction.rb", "README.rdoc"]
-  s.files = ["init.rb", "lib/fastpass.rb", "lib/gets_satisfaction.rb", "Rakefile", "README.rdoc", "Manifest", "gets_satisfaction.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "lib/fastpass.rb", "lib/gets_satisfaction.rb", "README.rdoc"]
+  s.files = ["CHANGELOG", "gets_satisfaction.gemspec", "init.rb", "lib/fastpass.rb", "lib/gets_satisfaction.rb", "Manifest", "Rakefile", "README.rdoc"]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/pius/gets_satisfaction}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Gets_satisfaction", "--main", "README.rdoc"]
@@ -24,8 +24,17 @@ Gem::Specification.new do |s|
     s.specification_version = 2
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_development_dependency(%q<active_support>, [">= 0"])
+      s.add_development_dependency(%q<oauth>, [">= 0"])
+      s.add_development_dependency(%q<erb>, [">= 0"])
     else
+      s.add_dependency(%q<active_support>, [">= 0"])
+      s.add_dependency(%q<oauth>, [">= 0"])
+      s.add_dependency(%q<erb>, [">= 0"])
     end
   else
+    s.add_dependency(%q<active_support>, [">= 0"])
+    s.add_dependency(%q<oauth>, [">= 0"])
+    s.add_dependency(%q<erb>, [">= 0"])
   end
 end
